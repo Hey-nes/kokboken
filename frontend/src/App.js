@@ -8,7 +8,7 @@ import Profile from "./pages/Profile";
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen bg-[#FFFAF3]">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

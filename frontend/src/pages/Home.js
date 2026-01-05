@@ -6,7 +6,7 @@ const Home = () => {
     <PageContainer>
       <h1>Sök recept</h1>
       <TextField
-        className="w-full md:w-[500px] lg:w-[700px] "
+        className="w-full md:w-[500px] lg:w-[700px]"
         placeholder="Sök efter recept..."
         variant="outlined"
         slotProps={{
@@ -14,6 +14,7 @@ const Home = () => {
             sx: {
               paddingLeft: "20px",
               borderRadius: "40px",
+              background: "white",
             },
           },
         }}
