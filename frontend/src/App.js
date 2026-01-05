@@ -1,16 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/navigation/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router";
+import CreateRecipe from "./pages/CreateRecipe";
+import Contacts from "./pages/Contacts";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Välkommen till Kokboken!
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="flex min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/skapa-recept" element={<CreateRecipe />} />
+          <Route path="/kontakter" element={<Contacts />} />
+          <Route path="/mina-sidor" element={<Profile />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
