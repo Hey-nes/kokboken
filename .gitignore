@@ -1,5 +1,30 @@
-# Python stuff
-env/
+# Backend
+backend/env/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
 
-# React stuff
-node_modules
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/coverage/
+frontend/.env*.local
+frontend/*.log
+
+# General
+.DS_Store
+.vscode/
+.idea/
+
+# Global Secrets
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Package Manager Stuff
+**/*.log
+**/.pnp
+**/.pnp.js
