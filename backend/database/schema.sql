@@ -1,28 +1,36 @@
 CREATE DATABASE IF NOT EXISTS kokboken_db;
 USE kokboken_db;
 
-CREATE TABLE recipies (
+CREATE TABLE IF NOT EXISTS recipes (
   id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(100) NOT NULL,
-  time VARCHAR(50) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  cooking_duration INT NOT NULL,
   portion INT NOT NULL CHECK (portion > 0),
   category ENUM("breakfast", "lunch", "dinner", "dessert") NOT NULL,
   picture VARCHAR(255)
 );
 
-CREATE TABLE recipie_ingredients (
+CREATE TABLE IF NOT EXISTS ingredients (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  recipie_id INT NOT NULL,
-  ingredient_name VARCHAR(100) NOT NULL,
-  amount FLOAT NOT NULL CHECK (amount > 0),
-  unit ENUM("l", "dl", "msk", "tsk", "krm") NOT NULL,
-  CONSTRAINT fk_recipie_ingredients FOREIGN KEY (recipie_id) REFERENCES recipies(id) ON DELETE CASCADE
+  ingredient_name VARCHAR(100) NOT NULL UNIQUE
 );
 
-CREATE TABLE recipie_method (
+CREATE TABLE IF NOT EXISTS recipe_ingredients (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  recipie_id INT NOT NULL,
-  step_order INT NOT NULL,
+  recipe_id INT NOT NULL,
+  ingredient_id INT NOT NULL,
+  amount FLOAT NOT NULL CHECK (amount > 0),
+  unit ENUM("kg", "g", "l", "dl", "ml", "msk", "tsk", "krm") NOT NULL,
+  CONSTRAINT fk_recipe_ingredients FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
+  CONSTRAINT fk_ingredient FOREIGN KEY (ingredient_id) REFERENCES ingredients(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS recipe_steps (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  recipe_id INT NOT NULL,
+  step_number INT NOT NULL,
   instruction TEXT NOT NULL,
-  CONSTRAINT fk_recipie_method FOREIGN KEY (recipie_id) REFERENCES recipies(id) ON DELETE CASCADE
+  CONSTRAINT fk_recipe_steps FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
+  CONSTRAINT UNIQUE (recipe_id, step_number)
 );
