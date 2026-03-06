@@ -4,10 +4,10 @@ USE kokboken_db;
 CREATE TABLE IF NOT EXISTS recipes (
   id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(100) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   cooking_duration INT NOT NULL,
   portion INT NOT NULL CHECK (portion > 0),
-  category ENUM("breakfast", "lunch", "dinner", "dessert") NOT NULL,
+  category ENUM("breakfast", "lunch", "dinner", "dessert", "meat", "fish", "vegetarian", "vegan") NOT NULL,
   picture VARCHAR(255)
 );
 
