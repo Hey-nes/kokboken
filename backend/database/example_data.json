@@ -1,0 +1,46 @@
+{
+  "title": "Kladdkaka",
+  "cooking_duration": 30,
+  "portion": 8,
+  "category": "dessert",
+  "ingredients": [
+    {
+      "ingredient_name": "smör",
+      "amount": 150,
+      "unit": "g"
+    },
+    {
+      "ingredient_name": "kakaopulver",
+      "amount": 1,
+      "unit": "dl"
+    },
+    {
+      "ingredient_name": "socker",
+      "amount": 3,
+      "unit": "dl"
+    },
+    {
+      "ingredient_name": "vaniljsocker",
+      "amount": 1,
+      "unit": "msk"
+    },
+    {
+      "ingredient_name": "vetemjöl",
+      "amount": 2,
+      "unit": "dl"
+    },
+    {
+      "ingredient_name": "ägg",
+      "amount": 2,
+      "unit": "stk"
+    }
+  ],
+  "recipe_steps": [
+    "Slå på ugnen på 175 grader.",
+    "Smält smöret i en kastrull, ta av från värmen.",
+    "Rör ihop smöret och de torra ingredienserna i ordning.",
+    "Rör i äggen, ett i taget.",
+    "Smöra en springform, häll i smeten och grädda i mitten av ugnen i 15 minuter."
+  ],
+  "picture": "https://electricbluefood.com/wp-content/uploads/2020/12/kladdkaka-09.webp"
+}
