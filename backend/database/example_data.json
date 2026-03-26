@@ -1,46 +1,83 @@
-{
-  "title": "Kladdkaka",
-  "cooking_duration": 30,
-  "portion": 8,
-  "category": "dessert",
-  "ingredients": [
-    {
-      "ingredient_name": "smör",
-      "amount": 150,
-      "unit": "g"
-    },
-    {
-      "ingredient_name": "kakaopulver",
-      "amount": 1,
-      "unit": "dl"
-    },
-    {
-      "ingredient_name": "socker",
-      "amount": 3,
-      "unit": "dl"
-    },
-    {
-      "ingredient_name": "vaniljsocker",
-      "amount": 1,
-      "unit": "msk"
-    },
-    {
-      "ingredient_name": "vetemjöl",
-      "amount": 2,
-      "unit": "dl"
-    },
-    {
-      "ingredient_name": "ägg",
-      "amount": 2,
-      "unit": "stk"
-    }
-  ],
-  "recipe_steps": [
-    "Slå på ugnen på 175 grader.",
-    "Smält smöret i en kastrull, ta av från värmen.",
-    "Rör ihop smöret och de torra ingredienserna i ordning.",
-    "Rör i äggen, ett i taget.",
-    "Smöra en springform, häll i smeten och grädda i mitten av ugnen i 15 minuter."
-  ],
-  "picture": "https://electricbluefood.com/wp-content/uploads/2020/12/kladdkaka-09.webp"
-}
+[
+  {
+    "title": "Kladdkaka",
+    "cooking_duration": 30,
+    "portion": 8,
+    "category": "dessert",
+    "ingredients": [
+      {
+        "ingredient_name": "smör",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient_name": "kakaopulver",
+        "amount": 1,
+        "unit": "dl"
+      },
+      {
+        "ingredient_name": "socker",
+        "amount": 3,
+        "unit": "dl"
+      },
+      {
+        "ingredient_name": "vaniljsocker",
+        "amount": 1,
+        "unit": "msk"
+      },
+      {
+        "ingredient_name": "vetemjöl",
+        "amount": 2,
+        "unit": "dl"
+      },
+      {
+        "ingredient_name": "ägg",
+        "amount": 2,
+        "unit": "stk"
+      }
+    ],
+    "recipe_steps": [
+      "Slå på ugnen på 175 grader.",
+      "Smält smöret i en kastrull, ta av från värmen.",
+      "Rör ihop smöret och de torra ingredienserna i ordning.",
+      "Rör i äggen, ett i taget.",
+      "Smöra en springform, häll i smeten och grädda i mitten av ugnen i 15 minuter."
+    ],
+    "picture": "https://electricbluefood.com/wp-content/uploads/2020/12/kladdkaka-09.webp"
+  },
+  {
+    "title": "Köttbullar och stuvade makaroner",
+    "cooking_duration": 20,
+    "portion": 4,
+    "category": "dinner",
+    "ingredients": [
+      {
+        "ingredient_name": "smör",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient_name": "frysta köttbullar",
+        "amount": 32,
+        "unit": "stk"
+      },
+      {
+        "ingredient_name": "snabbmakaroner",
+        "amount": 5,
+        "unit": "dl"
+      },
+      {
+        "ingredient_name": "röd mjölk",
+        "amount": 1,
+        "unit": "l"
+      }
+    ],
+    "recipe_steps": [
+      "Häll i mjölken och makaronerna i en stor kastrull, slå på värmen",
+      "Stek köttbullarna i smör på låg värme",
+      "Koka makaronerna i cirka 20 minuter, smaka av med salt och peppar.",
+      "Servera med ketchup"
+    ],
+    "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fingmar.app%2Fblogg%2Fwp-content%2Fuploads%2F2020%2F08%2FStuvade-makaroner.jpg&f=1&nofb=1&ipt=782f6b62ee135ef4e7a3566a3b7c2aa7efcb13699341e1ca21abbf96752306c0"
+  }
+]
