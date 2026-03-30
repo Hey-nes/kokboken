@@ -17,6 +17,10 @@ frontend/*.log
 .vscode/
 .idea/
 
+# Python cache
+__pycache__/
+*.pyc
+
 # Global Secrets
 **/.env
 **/.env.local

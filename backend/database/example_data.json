@@ -79,5 +79,60 @@
       "Servera med ketchup"
     ],
     "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fingmar.app%2Fblogg%2Fwp-content%2Fuploads%2F2020%2F08%2FStuvade-makaroner.jpg&f=1&nofb=1&ipt=782f6b62ee135ef4e7a3566a3b7c2aa7efcb13699341e1ca21abbf96752306c0"
+  },
+  {
+    "category": "breakfast",
+    "cooking_duration": 15,
+    "created_at": "Mon, 30 Mar 2026 11:18:31 GMT",
+    "id": 10,
+    "ingredients": [
+      {
+        "amount": 50.0,
+        "id": 7,
+        "ingredient_name": "smör",
+        "unit": "g"
+      },
+      {
+        "amount": 8.0,
+        "id": 12,
+        "ingredient_name": "ägg",
+        "unit": "stk"
+      },
+      {
+        "amount": 25.0,
+        "id": 47,
+        "ingredient_name": "gräslök",
+        "unit": "g"
+      }
+    ],
+    "picture": "https://www-static.koolkitchen.se/wp-content/uploads/2021/09/aggrora2.jpg?media=1691344458",
+    "portion": 2,
+    "steps": [
+      {
+        "id": 48,
+        "instruction": "Smält smöret i en kastrull på låg värme",
+        "recipe_id": 10,
+        "step_number": 1
+      },
+      {
+        "id": 49,
+        "instruction": "Lägg i äggen och rör om",
+        "recipe_id": 10,
+        "step_number": 2
+      },
+      {
+        "id": 50,
+        "instruction": "Smaka av med salt och peppar när äggen fått önskad konsistens",
+        "recipe_id": 10,
+        "step_number": 3
+      },
+      {
+        "id": 51,
+        "instruction": "Toppa med finhackad gräslök",
+        "recipe_id": 10,
+        "step_number": 4
+      }
+    ],
+    "title": "Äggröra"
   }
 ]
