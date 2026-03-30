@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS recipe_ingredients (
   recipe_id INT NOT NULL,
   ingredient_id INT NOT NULL,
   amount FLOAT NOT NULL CHECK (amount > 0),
-  unit ENUM("kg", "g", "l", "dl", "ml", "msk", "tsk", "krm") NOT NULL,
+  unit ENUM("kg", "g", "l", "dl", "ml", "msk", "tsk", "krm", "stk") NOT NULL,
   CONSTRAINT fk_recipe_ingredients FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
   CONSTRAINT fk_ingredient FOREIGN KEY (ingredient_id) REFERENCES ingredients(id) ON DELETE CASCADE
 );
