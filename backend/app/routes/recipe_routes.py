@@ -69,7 +69,7 @@ def get_recipe_by_id(recipe_id):
 
 
 # Route to update a specific recipe
-@recipe_bp.route("/id/<int:recipe_id>", methods=["PUT"])
+@recipe_bp.route("/id/<int:recipe_id>", methods=["PATCH"])
 def update_recipe(recipe_id):
     data = request.get_json()
     db_connection = None

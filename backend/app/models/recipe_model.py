@@ -36,3 +36,6 @@ class RecipeUpdate(BaseModel):
     ingredients: Optional[List[RecipeIngredient]] = None
     recipe_steps: Optional[List[str]] = None
     picture: Optional[str] = None
+
+    class Config:
+        extra = "forbid"

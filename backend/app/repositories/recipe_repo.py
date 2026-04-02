@@ -111,7 +111,10 @@ def get_recipe_by_id(db_connection, recipe_id):
             )
             recipe["ingredients"] = cursor.fetchall()
 
-            cursor.execute("SELECT * FROM recipe_steps WHERE recipe_id = %s ORDER BY step_number", (recipe_id,))
+            cursor.execute(
+                "SELECT * FROM recipe_steps WHERE recipe_id = %s ORDER BY step_number",
+                (recipe_id,),
+            )
             recipe["steps"] = cursor.fetchall()
 
         return recipe
@@ -128,25 +131,30 @@ def update_recipe(db_connection, recipe_id, data):
 
     try:
         db_connection.start_transaction()
-        cursor.execute(
-            "UPDATE recipes SET title = %s, cooking_duration = %s, portion = %s, category = %s, picture = %s WHERE id = %s",
-            (
-                data["title"],
-                data["cooking_duration"],
-                data["portion"],
-                data["category"],
-                data.get("picture"),
-                recipe_id,
-            ),
-        )
 
-        if "ingredients" in data:
+        recipe_columns = ["title", "cooking_duration", "portion", "category", "picture"]
+        updates = []
+        params = []
+
+        for key in recipe_columns:
+            if key in data:
+                updates.append(f"{key} = %s")
+                params.append(data[key])
+
+        if updates:
+            params.append("ingredients")
+            cursor.execute(
+                f"UPDATE recipes SET {', '.join(updates)} WHERE id = %s",
+                (params),
+            )
+
+        if "ingredients" in data and data["ingredients"]:
             cursor.execute(
                 "DELETE FROM recipe_ingredients WHERE recipe_id = %s", (recipe_id,)
             )
             _insert_ingredients(data, recipe_id, cursor)
 
-        if "recipe_steps" in data:
+        if "recipe_steps" in data and data["recipe_steps"]:
             cursor.execute(
                 "DELETE FROM recipe_steps WHERE recipe_id = %s", (recipe_id,)
             )
