@@ -22,7 +22,7 @@ def post_recipe():
         )
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 400
+        return jsonify({"error": str(e)}), 500
 
     finally:
         if db_connection:
@@ -40,7 +40,7 @@ def get_recipes():
         return jsonify(recipes), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 400
+        return jsonify({"error": str(e)}), 500
 
     finally:
         if db_connection:
@@ -61,7 +61,7 @@ def get_recipe_by_id(recipe_id):
             return jsonify({"error": "Not Found"}), 404
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 400
+        return jsonify({"error": str(e)}), 500
 
     finally:
         if db_connection:
@@ -86,7 +86,7 @@ def update_recipe(recipe_id):
         )
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 400
+        return jsonify({"error": str(e)}), 500
 
     finally:
         if db_connection:
@@ -110,7 +110,7 @@ def delete_recipe(recipe_id):
         )
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 400
+        return jsonify({"error": str(e)}), 500
 
     finally:
         if db_connection:
